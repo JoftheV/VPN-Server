@@ -1,4 +1,4 @@
-# VPN Project Dependencies
+# VPN Server Dependencies
 
 This document lists all dependencies required to set up, develop, and maintain the VPN service based on OpenVPN on an Ubuntu server. It includes software packages, libraries, and tools necessary for the operation and management of the VPN.
 
