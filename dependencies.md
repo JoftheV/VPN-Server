@@ -1,4 +1,75 @@
-To configure the dependencies for an OpenVPN server setup effectively, you'll need to address both the software installation and the analytical tools that monitor and maintain the VPN's performance and security. Here's a comprehensive approach to configuring these dependencies on a Linux system (assuming Ubuntu for package management commands), along with setting up the analytical tools that support ongoing operations.
+# VPN Project Dependencies
+
+This document lists all dependencies required to set up, develop, and maintain the VPN service based on OpenVPN on an Ubuntu server. It includes software packages, libraries, and tools necessary for the operation and management of the VPN.
+
+## Operating System
+
+- Ubuntu 20.04 LTS or newer
+
+## Software Packages
+
+These packages need to be installed on Ubuntu for the VPN service to function correctly:
+
+- `openvpn`: The core VPN software that creates secure point-to-point or site-to-site connections.
+- `easy-rsa`: A CLI utility to manage a PKI CA for generating and managing SSL certificates.
+- `openssl`: A robust toolkit for SSL and TLS protocols, necessary for creating encrypted connections.
+- `ufw`: Uncomplicated Firewall for managing network rules, ensuring secure access to the VPN server.
+
+### Installation Commands
+
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install openvpn easy-rsa openssl ufw -y
+
+Configuration and Management Tools
+
+	•	git: Version control system for tracking changes in the project and collaborating.
+	•	ansible (optional): For automating the deployment and configuration of VPN servers across environments.
+
+Installation Commands
+
+sudo apt install git -y
+sudo apt install ansible -y  # Optional
+
+Analytical and Monitoring Tools
+
+To ensure the VPN operates efficiently and securely, the following tools are recommended:
+
+	•	iperf3: For testing network bandwidth between the VPN server and clients.
+	•	nmap: Security scanner for discovering hosts and services on a computer network, thus finding open ports and detecting security risks.
+	•	logwatch: A customizable log analysis system, useful for monitoring and analyzing VPN server logs.
+	•	zabbix-agent: To monitor server performance and health.
+
+Installation Commands
+
+sudo apt install iperf3 nmap logwatch zabbix-agent -y
+
+Development Dependencies
+
+For developers contributing to the VPN project, the following tools and libraries are recommended:
+
+	•	docker: For creating, deploying, and running applications in containers, ensuring consistent environments across development and production.
+	•	virtualenv: A tool to create isolated Python environments, useful for Python-based management or automation scripts.
+
+Installation Commands
+
+sudo apt install docker.io -y
+sudo apt install python3-virtualenv -y
+
+Security and Compliance Tools
+
+	•	fail2ban: Intrusion prevention software framework that protects the server from brute-force attacks.
+	•	openvas: Full-featured vulnerability scanner.
+
+Installation Commands
+
+sudo apt install fail2ban -y
+sudo add-apt-repository ppa:mrazavi/openvas
+sudo apt install openvas -y
+
+Please note that specific versions and configurations may vary based on the project’s current state and future updates. Regularly review and update this document to reflect changes in the project’s dependencies.
+
+This `DEPENDENCIES.md` file serves as a comprehensive list that project maintainers, developers, and system administrators can refer to when setting up or maintaining the VPN service. It's crucial to keep this document updated as the project evolves to ensure all team members and contributors are aligned on the project's requirements.
 
 ### Configuring Software Dependencies
 
