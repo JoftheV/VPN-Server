@@ -62,7 +62,7 @@ This project and its documentation are available under the MIT License. For more
 We thank the OpenVPN Community, Easy-RSA Project, and all contributors for their support and resources.
 ```
 
-### Corrected `requirements.rst`
+### `requirements.rst`
 
 ```rst
 Requirements for OpenVPN Server Setup
