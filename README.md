@@ -248,5 +248,3 @@ Maintenance Requirements
 Regular updates, certificate renewals, user management, and security audits are crucial. See `maintenance-guide.md` for a comprehensive maintenance plan.
 
 ```
-
-These templates provide a solid foundation for documenting your OpenVPN server setup and maintenance. Adjust and expand these documents to fit the specifics of your environment, including any custom configurations or additional features you implement.
